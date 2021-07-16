@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { App } from './App';
@@ -7,11 +7,15 @@ import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
+  <React.Fragment>
+    <React.StrictMode>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </Suspense>
+    </React.StrictMode>
+  </React.Fragment>,
   document.getElementById('root')
 );
 
