@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.753);
+  justify-content: space-between;
+}
+
+.container img {
+  margin: 0;
+  padding: 0.5vw;
+  width: 20vh;
+}
+
+.container ul {
+  padding-top: 10px;
+  color: white;
+  list-style: none;
+}
+
+.container li {
+  display: inline-block;
+  padding-left: 10px;
+}

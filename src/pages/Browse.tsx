@@ -1,4 +1,5 @@
 import React from 'react';
+import './Browse.css';
 
 interface BrowseProps {}
 
