@@ -16,19 +16,15 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
         <div className="list">
           <nav>
             <ul>
-              <li>Hello</li>
-              <li>Hello</li>
-              <li>Hello</li>
-              <li>Hello</li>
+              <li>Movies</li>
+              <li>Series</li>
+              <li>New/Popular</li>
             </ul>
           </nav>
         </div>
         <div className="userinfo">
           <ul>
-            <li>Hello</li>
-            <li>Hello</li>
-            <li>Hello</li>
-            <li>Hello</li>
+            <li>Log Out</li>
           </ul>
         </div>
       </div>
