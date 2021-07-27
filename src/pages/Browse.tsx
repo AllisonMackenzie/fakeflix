@@ -12,6 +12,7 @@ export const Browse: React.FC<BrowseProps> = ({}) => {
         <Row
           title="NETFLIX ORIGINALS"
           fetchURL={requests.fetchNetflixOriginals}
+          isLargeRow
         />
         <Row title="Trending Now" fetchURL={requests.fetchTrendingAll} />
         <Row title="Top Rated" fetchURL={requests.fetchTopRated} />

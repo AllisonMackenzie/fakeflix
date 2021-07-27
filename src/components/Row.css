@@ -23,3 +23,11 @@
 .poster:hover {
   transform: scale(1.08);
 }
+
+.posterlarge {
+  max-height: 250px;
+}
+
+.posterlarge:hover {
+  transform: scale(1.1);
+}
