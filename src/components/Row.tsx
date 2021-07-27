@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { instance } from '../axios';
+import './Row.css';
 
 interface RowProps {
   title: string;
@@ -20,13 +21,15 @@ export const Row: React.FC<RowProps> = ({ title, fetchURL }) => {
 
   return (
     <React.Fragment>
-      <div className="rowTitle">{title}</div>
-      <div className="rowPosters">
-        {movies.map((movie: { poster_path: string; name: string }) => (
+      <div className="row__title">{title}</div>
+      <div className="row__posters">
+        {movies.map((movie: { poster_path: string; name: string; id: any }) => (
           <img
+            key={movie.id}
             className="poster"
             src={`${baseURL}${movie.poster_path}`}
             alt={movie.name}
+            loading="lazy"
           />
         ))}
       </div>
