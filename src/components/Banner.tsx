@@ -46,6 +46,7 @@ export const Banner: React.FC<BannerProps> = ({}) => {
               {truncate(movie?.overview, 150)}
             </div>
           </div>
+          <div className="banner--fadeBottom" />
         </header>
       </div>
     </React.Fragment>
