@@ -1,22 +1,34 @@
-.container {
+.navbar {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.75);
   display: flex;
-  background-color: rgba(0, 0, 0, 0.753);
   justify-content: space-between;
 }
 
-.container img {
-  margin: 0;
-  padding: 0.5vw;
-  width: 20vh;
+.navbar__logo {
+  position: fixed;
+  left: 20px;
+  width: 80px;
+  object-fit: contain;
 }
 
-.container ul {
+.navbar img {
+  margin: 0;
+  width: 15vh;
+}
+
+.navbar ul {
   padding-top: 10px;
   color: white;
   list-style: none;
 }
 
-.container li {
+.navbar li {
   display: inline-block;
   padding-left: 10px;
 }
