@@ -1,4 +1,5 @@
 import React from 'react';
+import { Banner } from '../components/Banner';
 import { Row } from '../components/Row';
 import requests from '../requests';
 import './Browse.css';
@@ -9,6 +10,7 @@ export const Browse: React.FC<BrowseProps> = ({}) => {
   return (
     <React.Fragment>
       <div>
+        <Banner />
         <Row
           title="NETFLIX ORIGINALS"
           fetchURL={requests.fetchNetflixOriginals}
