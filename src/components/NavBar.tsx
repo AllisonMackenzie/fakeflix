@@ -5,12 +5,12 @@ import './NavBar.css';
 interface NavBarProps {}
 
 export const NavBar: React.FC<NavBarProps> = ({}) => {
-  const [show, handleShow] = useState(false);
+  const [show, setShow] = useState(false);
 
   const scrollFunction = () => {
     if (window.scrollY > 100) {
-      handleShow(true);
-    } else handleShow(false);
+      setShow(true);
+    } else setShow(false);
   };
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
 
   return (
     <React.Fragment>
-      <div className={`navbar`}>
+      <div className={`navbar ${show && 'nav__black'}`}>
         <div className="navbar__logo">
           <NavLink to="/">
             <img src="images/FakeFlix.png" alt="FAKEFLIX" />
@@ -39,7 +39,7 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
         </div>
         <div className="userinfo">
           <ul>
-            <li>Log Out</li>
+            <li></li>
           </ul>
         </div>
       </div>

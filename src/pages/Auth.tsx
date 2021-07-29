@@ -8,13 +8,7 @@ interface AuthProps {}
 export const Auth: React.FC<AuthProps> = ({}) => {
   return (
     <React.Fragment>
-      <div>Auth Page</div>
-      <div>
-        <Link to="/browse">Click me to go to browse!</Link>
-      </div>
-      <div>
-        <GlowLoader />
-      </div>
+      <div className="auth"></div>
     </React.Fragment>
   );
 };

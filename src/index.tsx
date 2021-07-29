@@ -8,6 +8,7 @@ import { store } from './redux/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import { GlowLoader } from './components/GlowLoader';
+import { Watch } from './pages/Watch';
 const { Auth } = lazily(() => import('./pages/Auth'));
 const { Browse } = lazily(() => import('./pages/Browse'));
 const { Error404 } = lazily(() => import('./pages/Error404'));
@@ -22,6 +23,8 @@ ReactDOM.render(
             <Switch>
               <Route exact path="/" component={Auth} />
               <Route exact path="/browse" component={Browse} />
+              <Route exact path="/watch" component={Watch} />
+              <Route exact path="/watch/:path" component={Watch} />
               <Route component={Error404} />
             </Switch>
           </Provider>
