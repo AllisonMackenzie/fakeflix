@@ -14,27 +14,9 @@ const baseURL = 'https://image.tmdb.org/t/p/original/';
 
 export const Row: React.FC<RowProps> = ({ title, fetchURL, isLargeRow }) => {
   const [movies, setMovies] = useState<any>([]);
-  const [trailerURL, setTrailerURL] = useState<string>('');
-
-  const opts: object = {
-    height: `390`,
-    width: `100%`,
-    playerVars: {
-      autoplay: 1,
-    },
-  };
 
   const handleClick = (movie: any) => {
-    if (trailerURL) {
-      setTrailerURL(``);
-    } else {
-      /*movieTrailer(movie?.name || '')
-        .then((url: string) => {
-          const URLParams = new URLSearchParams(new URL(url).search);
-          setTrailerURL(URLParams.get('v'));
-        })
-        .catch((error: Error) => console.log(error)); */
-    }
+    window.open(`watch/${movie?.name || movie?.title || movie?.original_name}`);
   };
 
   useEffect(() => {
@@ -67,7 +49,6 @@ export const Row: React.FC<RowProps> = ({ title, fetchURL, isLargeRow }) => {
           )
         )}
       </div>
-      {trailerURL && <YouTube videoId={trailerURL} opts={opts} />}
     </React.Fragment>
   );
 };

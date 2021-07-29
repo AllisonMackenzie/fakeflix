@@ -25,7 +25,7 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
       <div className={`navbar ${show && 'nav__black'}`}>
         <div className="navbar__logo">
           <NavLink to="/">
-            <img src="images/FakeFlix.png" alt="FAKEFLIX" />
+            <img src="../images/FakeFlix.png" alt="FAKEFLIX" />
           </NavLink>
         </div>
         <div className="list">

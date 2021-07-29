@@ -1,0 +1,9 @@
+body {
+  background-image: none;
+  background-color: black;
+}
+
+.auth {
+  position: absolute;
+  top: 500px;
+}

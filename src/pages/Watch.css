@@ -1,4 +1,11 @@
-.watch {
+body {
   background: url('../images/auth_background.jpg') no-repeat center fixed;
   background-size: cover;
+}
+
+.watch {
+  position: absolute;
+  color: black;
+  top: 350px;
+  left: 350px;
 }
