@@ -3,6 +3,8 @@ import { Link, useParams } from 'react-router-dom';
 import { TrailerPlayer } from '../components/TrailerPlayer';
 import './Watch.css';
 
+//<TrailerPlayer movie={movie} />
+
 interface WatchProps {
   movie: string;
 }
@@ -14,7 +16,15 @@ export const Watch: React.FC<WatchProps> = ({}) => {
     console.log(`Movie: " + ${movie}`);
     return (
       <React.Fragment>
-        <TrailerPlayer movie={movie} />
+        <div className="video">
+          <iframe
+            width="1920"
+            height="1080"
+            src="https://www.youtube.com/embed/IMczcTuaaFY"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       </React.Fragment>
     );
   }
