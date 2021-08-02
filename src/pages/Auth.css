@@ -1,9 +1,12 @@
 body {
-  background-image: none;
+  background: url('../images/movieframe.jpg') no-repeat center fixed;
+  background-size: cover;
   background-color: black;
+  overflow-x: hidden;
 }
 
 .auth {
   position: absolute;
   top: 500px;
+  left: 400px;
 }
